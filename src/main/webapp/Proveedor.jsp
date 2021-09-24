@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="estilo_proveedor1.css">
 </head>
 <body>
-<body>
+
 
 <%!
 String nit="", telefono="",nombre="",ciudad="",direccion="",estado="";
