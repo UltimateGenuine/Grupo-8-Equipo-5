@@ -11,10 +11,10 @@
     <h1>Tienda Generica</h1>
     <nav>
       <ul>
-        <li><a href="" target="_blank">Usuario</a></li>
-        <li><a href="" target="_blank">Clientes</a></li>
-        <li><a href="" target="_blank">Proveedores</a></li>
-        <li><a href="" target="_blank">Productos</a></li>
+        <li><a href="Usuario.jsp" target="_blank">Usuario</a></li>
+        <li><a href="Cliente.jsp" target="_blank">Clientes</a></li>
+        <li><a href="Proveedor.jsp" target="_blank">Proveedores</a></li>
+        <li><a href="Producto.jsp" target="_blank">Productos</a></li>
         <li><a href="" target="_blank">Ventas</a></li>
         <li><a href="" target="_blank">Reportes</a></li>
       </ul>
