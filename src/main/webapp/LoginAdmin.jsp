@@ -10,7 +10,7 @@
 <body>
 <section class="form-login">
     <h1 class="titulo">Bienvenido a la Tienda Generica</h1>
-    <form action="loginAdmin" method="post">
+    <form action="LoginAdmin" method="post">
         <input class="control" type="text" name="usuario" placeholder="Usuario" required>
         <input class="control" type="password" name="pass" min="1" max="100" placeholder="Contraseña" required>
         <input class="buttons" type="submit" name="enviar" value="Aceptar">
