@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Meu de ventas</title>
+<title>Venta - ienda Generica</title>
 <link rel="stylesheet" href="Ventas.css">
 </head>
 <body>
@@ -57,18 +57,19 @@ totaliva=request.getParameter("totaliva");
 total=request.getParameter("total");
 }
 %>
-<header>
-		<h1>Tienda Genérica</h1>
-		<nav>
-			<a href="Usuarios.jsp">Usuarios</a>
-			<a href="Clientes.jsp">Clientes</a>
-			<a href="Proveedores.jsp">Proveedores</a>
-			<a href="Productos.jsp">Productos</a>
-			<a href="Ventas.jsp">Ventas</a>
-			<a href="Reportes.jsp">Reportes</a>
-		</nav>
-	</header>
-<div class="login-box">
+
+	<h1>Tienda Genérica</h1>
+	<nav>
+		<ul>
+			<li><a href="Usuario.jsp" target="_blank">Usuarios</a></li>
+			<li><a href="Cliente.jsp" target="_blank">Clientes</a></li>
+			<li><a href="Proveedor.jsp" target="_blank">Proveedores</a></li>
+			<li><a href="Producto.jsp" target="_blank">Productos</a></li>
+			<li><a href="Ventas.jsp" target="_blank">Ventas</a></li>
+			<li><a href="Reportes.jsp">Reportes</a></li>
+		</ul>
+	</nav>
+<section class="form-register">
 <form action="Venta" method=post>
 	<div><label>Cedula</label><input type="text" placeholder="Digite la cedula a consultar" name="cedula" required value=<%=cedula%>>
 	<input type="submit" name="consultar" Value="Consultar">
@@ -110,8 +111,6 @@ total=request.getParameter("total");
 <div><label class="a7">Total con IVA</label><input class="a10" type="text" name="total" value=<%=total%>></div>
 <input class="a11" type="submit" name="confirmar" Value="Confirmar">
 </form>
-
-
-</div>
+</section>
 </body>
 </html>

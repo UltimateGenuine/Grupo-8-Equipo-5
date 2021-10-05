@@ -29,5 +29,22 @@ public class ProductoDAO {
 		 }
 		 return resul;
 	 }
+	 
+	 public ProductoDTO ConsultarProducto(int codigo) {
+	    	
+	    	ProductoDTO pro=null;
+	    	try {
+	    		String sql="SELECT * FROM tienda_generica.productos where codigo_producto=?";
+	    		ps=con.prepareStatement(sql);
+	    		ps.setInt(1, codigo);
+	    		res=ps.executeQuery();
+	    		while(res.next()) {
+	    			pro= new ProductoDTO(res.getInt(1),res.getString(2),res.getInt(3),res.getDouble(4),res.getDouble(5),res.getDouble(6)); 
+	    		}
+			
+	    	}catch(SQLException ex) {
+			JOptionPane.showMessageDialog(null,"Error al consultar producto" +ex);
+	    	}return pro;
+	    }
 
 }

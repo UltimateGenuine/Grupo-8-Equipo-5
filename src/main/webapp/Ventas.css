@@ -1,144 +1,128 @@
 @charset "ISO-8859-1";
 
-body{
-	margin: 0;
-    padding: 0;
-    background-image:url("TIENDA VIRTUAL.png");
-    background-size: cover;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100vh;
-    opacity: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header{
-	background: #808080;
-	width: 100%;
-	height: 100px;
-	position: fixed;
+body {
+  font-family: sans-serif;
+  background-color: rgba(0, 0, 0, 0.452);
 }
 
-header h1{
-	color: white;
-	text-align: center;
+
+h1{
+  background-image:url("TIENDA VIRTUAL.png");
+  background-position:center;
+  background-size:1080px 280px;
+  padding: 20px;/**/
+  margin-bottom: 0p; /**/
+  margin-top: 0;
+
+  
 }
 
-header nav{
-	text-align: center;
-	height: 50px;
-	line-height: 50px;
-	width: 100%;
-	background: #808080;
+ul {
+/*outline: 1px solid blue;*/
+list-style: none; /**/
+padding: 0;
+margin: 0;
+background: #2e2e2a;
+line-height: 40px;/**/
+overflow:auto;/**/
+font-family: sans-serif;
 }
 
-header nav a{
-	color: white;
-	display: inline-block;
-	padding: 10px 25px;
-	line-height: 1;
-	text-decoration: none;
-	border-radius: 5px
+
+li {
+/*outline: 1px solid red;*/
+width: 100px;/**/
+
+text-align: center;/* */
+float: left;/**/
+font-family: sans-serif;
 }
 
-.login-box {
-    width: 1200px;
-    height: 600px;
-    background: #808080;
-    color: #fff;
-    top: 60%;
-    left: 50%;
-    position:absolute;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box;
-    padding: 50px 30px;
+a {
+/*outline: 1px solid green;*/
+text-decoration: none; /* */
+display: block;/**/
+color: #fff;
+font-family: sans-serif;
 }
 
-.login-box input{
-    margin-bottom: 30px;
+a:hover {
+/**/
+background: #f9a91a;
+color: #000;
+font-family: sans-serif;
 }
 
-.login-box [class="a1"]{
-    position: relative;
-    left: 2%;
+.form-register {
+  width: 1000px;
+  background: #38393a;
+  padding: 30px;
+  margin: auto;
+  margin-top: 80px;
+  border-radius: 4px;
+  font-family: sans-serif;
+  color: white;
+  box-shadow: 7px 13px 37px #000;
 }
 
-.login-box [class="a2"]{
-    position: absolute;
-    left: 35%;
+.form-register h4 {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: 65px;
+  border-bottom: 1px solid;
+  height: 40px;
+  color:rgb(255, 255, 255);
 }
 
-.login-box [class="a3"]{
-    position: absolute;
-    left: 56%;
+.controls {
+  width: 40%;
+  background: #252323;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  margin-left: 60px;
+  border: 1px solid #0c0c0c;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: white;
 }
-
-.login-box [class="a4"]{
-    position: absolute;
-    left: 78%;
+.botons {
+  width: 20%;
+  background: #070707;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin-left: 100px;
+  font-size: 16px;
+  font-family: sans-serif;
 }
+.consulta{
 
-.login-box [class="a5"]{
-    position: relative;
-    left: 68%;
+  width: 20%;
+  background: #070707;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin-left: 50px;
+  font-size: 16px;
+  font-family: sans-serif;
 }
-
-.login-box [class="a8"]{
-    position: relative;
-    left: 70%;
-}
-
-.login-box [class="a6"]{
-    position: relative;
-    left: 68%;
-}
-
-.login-box [class="a9"]{
-    position: relative;
-    left: 71.3%;
-}
-
-.login-box [class="a7"]{
-    position: relative;
-    left: 68%;
-}
-
-.login-box [class="a10"]{
-    position: relative;
-    left: 68.6%;
-}
-
-.login-box [class="a11"]{
-    position: relative;
-    left: 83%;
-}
-
-.login-box input[type="submit"]{
-    background-color: white;
-  	border: none;
-  	color: black;
-  	padding: 10px 20px;
-  	text-align: center;
-  	text-decoration: none;
-  	display: inline-block;
-  	font-size: 15px;
-  	
-  	transition-duration: 0.4s;
-  	cursor: pointer;
- }
- 
- .login-box input[type="submit"]{
-    background-color: white; 
-  	color: black; 
-  	border: 2px solid #000000;
- }
- 
- .login-box input[type="submit"]:hover {
-    background-color: #000000;
-  	color: white;
- }
- 
- .login-box input[type="text"]{
-    margin: 2px 20px;
-    padding: 8px 20px;
-    border-bottom: 1px solid #fff;
-    color: #000000;
+.consultando {
+  width: 30%;
+  background: #252323;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-left: 240px;
+  border: 1px solid #0c0c0c;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: white;
 }

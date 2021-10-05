@@ -30,7 +30,7 @@ public class Venta extends HttpServlet {
 				int cedula;
 				String nombre;
 				cedula=Integer.parseInt(request.getParameter("cedula"));
-				ClienteDTO cli=cliDao.ConsultarCliente(cedula);
+				ClienteDTO cli=cliDao.Buscar_Cliente(cedula);
 				if(cli!=null) {
 				cedula=cli.getCedula();
 				nombre=cli.getNombre();
@@ -48,10 +48,10 @@ public class Venta extends HttpServlet {
 				ProductoDTO pro=proDao.ConsultarProducto(codigo);
 				if(pro!=null) {
 				codigo=pro.getCodigo();
-				producto=pro.getProducto();
+				producto=pro.getNombre();
 				iva=pro.getIva();
-				precioCom=pro.getPrecio_Compra();
-				precioVen=pro.getPrecio_Venta();
+				precioCom=pro.getPrecioCompra();
+				precioVen=pro.getPrecioVenta();
 				response.sendRedirect("Ventas.jsp?codigo="+codigo+"&&producto="+producto+"&&iva="+iva+"&&precioCom="+precioCom+"&&precioVen="+precioVen);
 				}else {
 					response.sendRedirect("Ventas.jsp?men=Producto no encontrado");
@@ -66,10 +66,10 @@ public class Venta extends HttpServlet {
 				ProductoDTO pro=proDao.ConsultarProducto(codigo);
 				if(pro!=null) {
 				codigo=pro.getCodigo();
-				producto=pro.getProducto();
+				producto=pro.getNombre();
 				iva=pro.getIva();
-				precioCom=pro.getPrecio_Compra();
-				precioVen=pro.getPrecio_Venta();
+				precioCom=pro.getPrecioCompra();
+				precioVen=pro.getPrecioVenta();
 				response.sendRedirect("Ventas.jsp?codigodos="+codigo+"&&productodos="+producto+"&&ivados="+iva+"&&precioComdos="+precioCom+"&&precioVendos="+precioVen);
 				}else {
 					response.sendRedirect("Ventas.jsp?men=Producto no encontrado");
@@ -84,10 +84,10 @@ public class Venta extends HttpServlet {
 				ProductoDTO pro=proDao.ConsultarProducto(codigo);
 				if(pro!=null) {
 				codigo=pro.getCodigo();
-				producto=pro.getProducto();
+				producto=pro.getNombre();
 				iva=pro.getIva();
-				precioCom=pro.getPrecio_Compra();
-				precioVen=pro.getPrecio_Venta();
+				precioCom=pro.getPrecioCompra();
+				precioVen=pro.getPrecioVenta();
 				response.sendRedirect("Ventas.jsp?codigotres="+codigo+"&&productotres="+producto+"&&ivatres="+iva+"&&precioComtres="+precioCom+"&&precioVentres="+precioVen);
 				}else {
 					response.sendRedirect("Ventas.jsp?men=Producto no encontrado");
