@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Venta - ienda Generica</title>
+<title>Venta - Tienda Generica</title>
 <link rel="stylesheet" href="Ventas.css">
 </head>
 <body>
@@ -71,45 +71,47 @@ total=request.getParameter("total");
 	</nav>
 <section class="form-register">
 <form action="Venta" method=post>
-	<div><label>Cedula</label><input type="text" placeholder="Digite la cedula a consultar" name="cedula" required value=<%=cedula%>>
-	<input type="submit" name="consultar" Value="Consultar">
-	<label>Cliente</label><input type="text" name="cliente" value=<%=cliente%>></div>
+	<div>
+	<input class="consultandoC" type="text" placeholder="Digite la cedula" name="cedula" required value=<%=cedula%>>
+	<input class="consulta" type="submit" name="consultar" Value="Consultar">
+	<input class="consultandoCl" type="text" name="cliente" value=<%=cliente%>>
+	</div>
 
 <label class="a1">Cod. Producto</label><label class="a2">Nombre del producto</label><label class="a3">Cant.</label><label class="a4">Valor total</label>
 
-	<div><input type="text" placeholder="Digite el codigo a consultar" name="codigo" value=<%=codigo%>>
-		<input type="submit" name="consultaruno" Value="Consultar">
-		<input type="text" name="productouno" value=<%=producto%>>
-		<input type="text" name="cantidaduno" pattern="[1-9]+" title="Introduzca solo numeros" value=<%=cantidaduno%>>
-		<input type="text" name="valortotaluno" value=<%=valortotaluno%>>
+	<div><input class="consultandoC2" type="text" placeholder="Digite el codigo" name="codigo" value=<%=codigo%>>
+		<input class="consulta2" type="submit" name="consultaruno" Value="Consultar">
+		<input class="consultandoPr" type="text" name="productouno" value=<%=producto%>>
+		<input class="consultandoCa" type="text" name="cantidaduno" pattern="[1-9]+" title="Introduzca solo numeros" value=<%=cantidaduno%>>
+		<input class="consultandoVal" type="text" name="valortotaluno" value=<%=valortotaluno%>>
 		<input type="hidden" name="precioCom" value=<%=precioCom%>>
 		<input type="hidden" name="precioVen" value=<%=precioVen%>>
 	</div>
 
-	<div><input type="text" placeholder="Digite el codigo a consultar" name="codigodos" value=<%=codigodos%>>
-		<input type="submit" name="consultardos" Value="Consultar">
-		<input type="text" name="productodos" value=<%=productodos%>>
-		<input type="text" name="cantidaddos" pattern="[1-9]+" title="Introduzca solo numeros" value=<%=cantidaddos%>>
-		<input type="text" name="valortotaldos" value=<%=valortotaldos%>>
+	<div><input class="consultandoC3" type="text" placeholder="Digite el codigo" name="codigodos" value=<%=codigodos%>>
+		<input class="consulta3" type="submit" name="consultardos" Value="Consultar">
+		<input class="consultandoPr3" type="text" name="productodos" value=<%=productodos%>>
+		<input class="consultandoCa3" type="text" name="cantidaddos" pattern="[1-9]+" title="Introduzca solo numeros" value=<%=cantidaddos%>>
+		<input class="consultandoVal3" type="text" name="valortotaldos" value=<%=valortotaldos%>>
 		<input type="hidden" name="precioComdos" value=<%=precioComdos%>>
 		<input type="hidden" name="precioVendos" value=<%=precioVendos%>>
 	</div>
 
 
-	<div><input type="text" placeholder="Digite el codigo a consultar" name="codigotres" value=<%=codigotres%>>
-		<input type="submit" name="consultartres" Value="Consultar">
-		<input type="text" name="productotres" value=<%=productotres%>>
-		<input type="text" name="cantidadtres" pattern="[1-9]+" title="Introduzca solo numeros" value=<%=cantidadtres%>>
-		<input type="text" name="valortotaltres" value=<%=valortotaltres%>>
+	<div><input class="consultandoC3" type="text" placeholder="Digite el codigo" name="codigotres" value=<%=codigotres%>>
+		<input class="consulta3" type="submit" name="consultartres" Value="Consultar">
+		<input class="consultandoPr3" type="text" name="productotres" value=<%=productotres%>>
+		<input class="consultandoCa3" type="text" name="cantidadtres" pattern="[1-9]+" title="Introduzca solo numeros" value=<%=cantidadtres%>>
+		<input class="consultandoVal3" type="text" name="valortotaltres" value=<%=valortotaltres%>>
 		<input type="hidden" name="precioComtres" value=<%=precioComtres%>>
 		<input type="hidden" name="precioVentres" value=<%=precioVentres%>>
 	</div>
 
 
-<div><label class="a5">Total venta</label><input class="a8" type="text" name="totalventa" value=<%=totalventa%>></div>
-<div><label class="a6">Total IVA</label><input class="a9" type="text" name="totaliva" value=<%=totaliva%>></div>
-<div><label class="a7">Total con IVA</label><input class="a10" type="text" name="total" value=<%=total%>></div>
-<input class="a11" type="submit" name="confirmar" Value="Confirmar">
+<div><label class="a5">Total venta</label><input id="consultandoC4" class="a8" type="text" name="totalventa" value=<%=totalventa%>></div>
+<div><label class="a6">Total IVA</label><input id="consultandoC4" class="a9" type="text" name="totaliva" value=<%=totaliva%>></div>
+<div><label class="a7">Total con IVA</label><input id="consultandoC4" class="a10" type="text" name="total" value=<%=total%>></div>
+<input id="consultandoCa4" class="a11" type="submit" name="confirmar" Value="Confirmar">
 </form>
 </section>
 </body>
