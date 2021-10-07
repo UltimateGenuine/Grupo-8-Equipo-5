@@ -19,7 +19,7 @@ public class VentaDAO {
 		
 		boolean resul=false;
 		try {
-		String sql="insert into venta ('cedula_cliente', 'cedula_usuario', 'ivaventa', 'total_venta', 'valor_venta')values(?,?,?,?,?)";
+		String sql="INSERT INTO `tienda_generica`.`ventas` (`cedula_cliente`, `cedula_usuario`, `ivaventa`, `total_venta`, `valor_venta`) VALUES (?,?,?,?,?)";
 		ps=con.prepareStatement(sql);
 		ps.setInt(1, ven.getCedulaCliente());
 		ps.setInt(2, ven.getCedulaUsuario());
