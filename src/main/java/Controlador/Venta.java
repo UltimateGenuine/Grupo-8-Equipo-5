@@ -11,6 +11,8 @@ import Modelo.ClienteDAO;
 import Modelo.ClienteDTO;
 import Modelo.ProductoDAO;
 import Modelo.ProductoDTO;
+import Modelo.VentaDAO;
+import Modelo.VentaDTO;
 
 
 @WebServlet("/Venta")
@@ -25,6 +27,7 @@ public class Venta extends HttpServlet {
 		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			ClienteDAO cliDao=new ClienteDAO();
 			ProductoDAO proDao=new ProductoDAO();
+			VentaDAO venDao=new VentaDAO();
 			
 			if(request.getParameter("consultar")!=null) {
 				int cedula;
@@ -96,6 +99,8 @@ public class Venta extends HttpServlet {
 			
 			if(request.getParameter("confirmar")!=null) {
 				double valortotaluno,precioCom,cantidaduno,valortotaldos,precioComdos,cantidaddos,valortotaltres,precioComtres,cantidadtres,totalventa,totaliva,precioVen,precioVendos,precioVentres,total;
+				int cedulaUsuario=123456789;
+				int cedulaCliente=Integer.parseInt(request.getParameter("cedula"));
 				precioCom=Double.parseDouble(request.getParameter("precioCom"));
 				cantidaduno=Double.parseDouble(request.getParameter("cantidaduno"));
 				valortotaluno=precioCom*cantidaduno;
@@ -111,8 +116,11 @@ public class Venta extends HttpServlet {
 				precioVentres=Double.parseDouble(request.getParameter("precioVentres"));
 				totaliva=((precioVen*cantidaduno)-valortotaluno)+((precioVendos*cantidaddos)-valortotaldos)+((precioVentres*cantidadtres)-valortotaltres);
 				total=totalventa+totaliva;
-				response.sendRedirect("Ventas.jsp?valortotaluno="+valortotaluno+"&&cantidaduno="+cantidaduno+"&&valortotaldos="+valortotaldos+"&&cantidaddos="+cantidaddos+"&&valortotaltres="+valortotaltres+"&&cantidadtres="+cantidadtres+"&&totalventa="+totalventa+"&&totaliva="+totaliva+"&&total="+total);
-				//response.sendRedirect("Ventas.jsp?valortotaltres="+valortotaltres+"&&cantidadtres="+cantidadtres);
+				VentaDTO ven=new VentaDTO(cedulaCliente, cedulaUsuario, totaliva, total, totalventa);
+				if(venDao.agregarVenta(ven)) {
+					response.sendRedirect("Ventas.jsp?valortotaluno="+valortotaluno+"&&cantidaduno="+cantidaduno+"&&valortotaldos="+valortotaldos+"&&cantidaddos="+cantidaddos+"&&valortotaltres="+valortotaltres+"&&cantidadtres="+cantidadtres+"&&totalventa="+totalventa+"&&totaliva="+totaliva+"&&total="+total);
+					//response.sendRedirect("Ventas.jsp?valortotaltres="+valortotaltres+"&&cantidadtres="+cantidadtres);
+				}
 			}
 	}
 
